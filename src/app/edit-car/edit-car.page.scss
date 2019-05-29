@@ -1,0 +1,72 @@
+.welcome-card ion-img {
+    max-height: 10vh;
+    overflow: hidden;
+  }
+  
+  .welcome-card{
+    background-color: #fff;
+  }
+  
+  .card-manager{
+    background-color: #3171e0;
+    color: #fff;
+  }
+
+  .form-input{
+    background-color: #3171e0;
+    color: rgb(32, 32, 32);
+    --ion-background-color:#fff;
+  }
+  
+  .card-manager ion-card-title{
+    background-color: #3171e0;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  button > ion-ripple-effect{
+    color: #3ae1f7;
+    --ripple-color: #3ae1f7;
+  }
+  
+  button ion-ripple-effect{
+    color: #3ae1f7;
+    --ripple-color: #3ae1f7;
+  }
+
+  ion-list{
+    --ion-background-color:#fff;
+  }
+
+  .ion-item-border {
+    border-radius: 10px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
+
+    .ion-item-border ion-item{
+        border-radius: 15px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        //padding-bottom: 5px;
+        //padding-top: 5px;
+    }
+
+    .footer-dbc770 ion-title{
+        color: #d2d2d2e0;
+        font-size: small;
+    }
+  
+  .ion-img{
+    visibility: hidden;
+  }
+  
+  .full-image{
+    background-color: aqua;
+    width: 50%;
+    height: 50%;
+    align-content: flex-end;
+    align-items: center;
+  }

@@ -74,4 +74,43 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+
+
+
+  
+  -ion-grid-width-lg: 90%;
+  --ion-grid-width-xl: 80%;
+  --ion-grid-columns: 12;
+  //--ion-tab-bar-background: rgb(240, 240, 240);
+  //--ion-toolbar-background: #2b87ff;
+  --ion-tab-bar-background: #2f6194;
+  --ion-toolbar-background: #2f6194;
+  --ion-toolbar-color: #ffffff;
+  --ion-toolbar-color-ual: #2f6194;
+
+  --ion-background-color: #f1f1f1;
+
+  --ripple-color: #3ae1f7;
+
+  --ion-input-background: #fff;
+
+
+
+  
+
+  
+
+    $grid-breakpoints: (
+    xs: 0, // Phone (0px - 575px)
+    sm: 576px, // Phablet (576px - 767px)
+    md: 768px, // Tablet vertical (768px - 991px)
+    lg: 992px, // Tablet horizontal, Desktop (992px and above)
+    xl: 1200px // Tablet horizontal, Desktop (800px and above)
+    );
+
+    $grid-max-widths: (
+    xl: 1200px
+    );
 }
