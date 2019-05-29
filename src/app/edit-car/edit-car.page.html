@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home">
+        <ion-ripple-effect type="bounded"></ion-ripple-effect>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit car</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+      <form #Car="ngForm" (ngSubmit)="updateCar(Car.form);">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size-lg="6" size-xl="6" size-md="5" size-sm="9" size-xs="12">
+                  <ion-card class="welcome-card" >
+                      <ion-ripple-effect></ion-ripple-effect>
+                      <!-- <img src="assets/images/user256x256.png"> -->
+                      <ion-card-header>
+                        <ion-ripple-effect></ion-ripple-effect>
+                        <ion-card-subtitle>ID: {{car.id}}</ion-card-subtitle>
+                        <ion-card-title>
+                          <!-- Inputs with labels -->
+                          <ion-item class="form-input">
+                            <ion-label position="stacked">Edit country</ion-label>
+                            <ion-input  name="fabricacion" ngModel #fabricacion="ngModel" placeholder={{car.fabricacion}}></ion-input>
+                          </ion-item>
+                        </ion-card-title>
+                      </ion-card-header>
+                      <ion-card-content>
+                        <!-- Input with placeholder -->
+                        <ion-item  class="form-input">
+                            <ion-label position="stacked">Edit Marca</ion-label>
+                            <ion-input name="marca" ngModel #marca="ngModel" placeholder={{car.marca}}></ion-input>
+                        </ion-item>
+
+                        <ion-item  class="form-input">
+                            <ion-label position="stacked">Edit Modelo</ion-label>
+                            <ion-input name="modelo" ngModel #modelo="ngModel" placeholder={{car.modelo}}></ion-input>
+                        </ion-item>
+
+                        <ion-item  class="form-input">
+                            <ion-label position="stacked">Edit Power</ion-label>
+                            <ion-input name="potencia" type="number" inputmode="numeric" min="0" max="1000" ngModel #potencia="ngModel" placeholder={{car.potencia}}></ion-input>
+                        </ion-item>
+
+                        <ion-item class="form-input">
+                            <ion-label position="floating">Max Speed</ion-label>
+                            <ion-input name="maxspeed" type="number" inputmode="numeric" min="0" max="500" class="form-control" ngModel #maxspeed="ngModel" placeholder={{car.maxspeed}}></ion-input>
+                        </ion-item>
+                        
+                      </ion-card-content>
+                    </ion-card>
+          </ion-col>
+
+
+          <ion-col class="ion-justify-content-center" size-lg="3" size-xl="3" size-md="3" size-sm="9" size-xs="12">
+
+
+
+              <ion-button (click)="deleteCar()" expand="block">
+                  <ion-ripple-effect></ion-ripple-effect>
+                  Delete Car
+                </ion-button>
+                <ion-button  type="submit" expand="block">
+                    <ion-ripple-effect></ion-ripple-effect>
+                    Save Changes
+                  </ion-button>
+          </ion-col>
+        
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

@@ -7,8 +7,48 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+
+  <ion-grid fixed>
+
+        <ion-list class="ion-item-border" *ngIf="cars">
+            <ion-item button  *ngFor="let car of cars" [routerLink]="['edit-car', car]" routerDirection="forward">
+              <ion-ripple-effect></ion-ripple-effect>
+              <ion-icon slot="start" name="car"></ion-icon>
+              <ion-icon slot="end" name="create"></ion-icon>              
+              <ion-label>
+                  <h2>Modelo: {{car.modelo}}</h2>
+                  <h2>Marca: {{car.marca}}</h2>
+                  <h2>País: {{car.fabricacion}}</h2>
+                  <h2>Vel. Max: {{car.maxspeed}}</h2>
+                  <h2>Potencia: {{car.potencia}}</h2>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+
+          <ion-list class="ion-item-border" *ngIf="!cars">
+              <ion-item button *ngFor="let traveler of [1,2,3,4,5,6]">
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-avatar slot="start">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-avatar>
+                <ion-avatar slot="end">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-avatar>       
+                <ion-label>
+                    <h2><ion-skeleton-text width="80%"></ion-skeleton-text></h2>
+                    <h2><ion-skeleton-text width="70%"></ion-skeleton-text></h2>
+                    <h2><ion-skeleton-text width="50%"></ion-skeleton-text></h2>
+                    <h2><ion-skeleton-text width="50%"></ion-skeleton-text></h2>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+
+  </ion-grid>
+
+                <!-- fab placed to the bottom end -->
+                <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                  <ion-fab-button [routerLink]="['add-car']" routerDirection="forward">
+                    <ion-icon name="add"></ion-icon>
+                  </ion-fab-button>
+                </ion-fab>
 </ion-content>
