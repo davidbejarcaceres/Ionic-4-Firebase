@@ -1,5 +1,7 @@
 {
   "name": "firebase4",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

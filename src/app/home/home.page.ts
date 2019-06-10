@@ -19,8 +19,6 @@ export class HomePage {
 
   }
 
-
-
   ionViewWillEnter() {
     this.firebaseService.getCars().subscribe(data => {
 
