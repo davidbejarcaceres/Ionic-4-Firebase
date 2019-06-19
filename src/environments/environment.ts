@@ -11,7 +11,7 @@ export const environment = {
     projectId: "hibrido-ee783",
     storageBucket: "hibrido-ee783.appspot.com",
     messagingSenderId: "237907313995",
-    appId: "1:237907313995:web:a503b83003d99b02"
+    appId: "1:237907313995:web:a503b83003d99b02",
   }
 };
 

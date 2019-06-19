@@ -40,4 +40,8 @@ export class HomePage {
   ngOnInit() {
   }
 
+  logout(){
+    this.firebaseService.logout();
+  }
+
 }
